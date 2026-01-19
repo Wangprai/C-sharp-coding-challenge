@@ -1,33 +1,69 @@
 using System;
+using System.ComponentModel;
+using System.Text;
 
 namespace C_sharp_coding_challenge
 {
-    class Phone
+    public class Phone
     {
         private string StringInput;
-        private string[] Letters = { "", "", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ" };
+        private static readonly string[] Letters = { "", "", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ" };
 
-        public Phone(string stringInput ,string letters)
+        public Phone(string stringInput)
         {
             StringInput = stringInput;
-            Letters = letters;
         }
 
         public string stringInput
         {
-            get { return stringInput; }
-            set { return stringInput = value; }
+            get { return StringInput; }
+            set { StringInput = value; }
         }
 
-        public string[] Letters
+        public static string OldPhonePad(string stringInput)
         {
-            get { return letters; }
-            set { return letters = value; }
-        }
+            StringBuilder stringOutput = new StringBuilder();
+            int lastDigit = -1;
+            int count = 0;
 
-        public static string OldPhonePad(string input)
-        {
-            
+            for (int i = 0; i < stringInput.Length; i++)
+            {
+                char currentChar = stringInput[i];
+                if (currentChar == ' ')
+                {
+                    if (count > 0)
+                    {
+                        stringOutput.Append(Letters[lastDigit][count - 1]);
+                        lastDigit = -1;
+                        count = 0;
+                    }
+                }
+
+                else if (currentChar >= '2' && currentChar <= '9')
+                {
+                    int currentDigit = currentChar - '0';
+
+                    if (currentDigit == lastDigit)
+                    {
+                        count ++;
+                    }
+                    else
+                    {
+                        if (count > 0)
+                        {
+                            stringOutput.Append(Letters[lastDigit][count - 1]);
+                        }
+                        lastDigit = currentDigit;
+                        count = 1;
+                    }
+                }
+            }
+
+            if (count > 0)
+            {
+                stringOutput.Append(Letters[lastDigit][count - 1]);
+            }
+            return stringOutput.ToString();
         }
     }
 }

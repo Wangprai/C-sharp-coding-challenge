@@ -7,7 +7,11 @@ namespace C_sharp_coding_challenge
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Old phone pad message");
+            Console.WriteLine("Test Case:");
+            Console.WriteLine(Phone.OldPhonePad("33"));  // output: E
+            Console.WriteLine(Phone.OldPhonePad("227")); // output: BR
+            Console.WriteLine(Phone.OldPhonePad("4433555 555666")); // output: HELLO
         }
     }
 }
