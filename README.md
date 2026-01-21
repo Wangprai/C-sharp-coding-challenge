@@ -17,13 +17,16 @@ Example:
 - `22` → B  
 - `222` → C  
 
+
 ## Project Structure
+```text
 C_sharp_coding_challenge/
 │
 ├── Phone.cs        // Core Old Phone Pad logic
 ├── Program.cs      // Console application entry point
 ├── .gitignore
 └── README.md
+```
 
 ## Keypad Mapping
 
