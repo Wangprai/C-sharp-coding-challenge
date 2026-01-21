@@ -5,7 +5,6 @@ namespace C_sharp_coding_challenge
 {
     public class Phone
     {
-        private string StrInput;
         private static readonly string[] Letters = { 
             "",  // 0
             "",  // 1 
@@ -19,22 +18,14 @@ namespace C_sharp_coding_challenge
             "WXYZ"  // 9
         };
 
-        public Phone(string stringInput)
+        public static string OldPhonePad(string? stringInput)
         {
-            StringInput = stringInput;
-        }
-
-        public string StringInput
-        {
-            get { return StrInput; }
-            set { StrInput = value; }
-        }
-
-        public static string OldPhonePad(string stringInput)
-        {
-            StringBuilder stringOutput = new StringBuilder();
+            StringBuilder stringOutput = new();
             int lastDigit = -1;
             int count = 0;
+
+            // warning exception
+            if (string.IsNullOrEmpty(stringInput)) return "";
 
             for (int i = 0; i < stringInput.Length; i++)
             {
