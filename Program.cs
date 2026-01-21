@@ -9,9 +9,10 @@ namespace C_sharp_coding_challenge
         {
             Console.WriteLine("Old phone pad message");
             Console.WriteLine("Test Case:");
-            Console.WriteLine(Phone.OldPhonePad("33"));  // output: E
-            Console.WriteLine(Phone.OldPhonePad("227")); // output: BR
-            Console.WriteLine(Phone.OldPhonePad("4433555 555666")); // output: HELLO
+            Console.WriteLine(Phone.OldPhonePad("33#"));  // output: E
+            Console.WriteLine(Phone.OldPhonePad("227*#")); // output: BR
+            Console.WriteLine(Phone.OldPhonePad("4433555 555666#")); // output: HELLO
+            Console.WriteLine(Phone.OldPhonePad("8 88777444666*664#")); // output: TURING
         }
     }
 }

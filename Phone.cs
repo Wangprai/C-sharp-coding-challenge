@@ -33,7 +33,7 @@ namespace C_sharp_coding_challenge
                 {
                     if (count > 0)
                     {
-                        stringOutput.Append(Letters[lastDigit][count - 1]);
+                        stringOutput.Append(Letters[lastDigit][(count - 1) % Letters[lastDigit].Length]);
                         lastDigit = -1;
                         count = 0;
                     }
@@ -51,7 +51,7 @@ namespace C_sharp_coding_challenge
                     {
                         if (count > 0)
                         {
-                            stringOutput.Append(Letters[lastDigit][count - 1]);
+                            stringOutput.Append(Letters[lastDigit][(count - 1) % Letters[lastDigit].Length]);
                         }
                         lastDigit = currentDigit;
                         count = 1;
@@ -61,7 +61,7 @@ namespace C_sharp_coding_challenge
 
             if (count > 0)
             {
-                stringOutput.Append(Letters[lastDigit][count - 1]);
+                stringOutput.Append(Letters[lastDigit][(count - 1) % Letters[lastDigit].Length]);
             }
             return stringOutput.ToString();
         }
