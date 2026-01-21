@@ -7,7 +7,7 @@ I started with Python code before C#
 
 **Python code:** https://colab.research.google.com/drive/1Fkw64wrTqQBd5wh0wWzm3V8PlXT-HlXB?usp=sharing
 
-**Prompt using:** https://chatgpt.com/share/6970b519-7304-8005-b7c2-d154dd6a5919
+**Prompt using (ChatGPT):** https://chatgpt.com/share/6970b519-7304-8005-b7c2-d154dd6a5919
 
 ## Problem Description
 
